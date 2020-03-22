@@ -1,10 +1,20 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "./dist/wads-exercise-week4",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/public/**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   }
 }
